@@ -7,6 +7,11 @@
   padding: 0;
   font-family: sans-serif;
 }
+
+.textoMenu{
+  text-decoration: none;
+  color: aliceblue;
+}
 @media (max-width: 767px){
 header{
   background-color: var(--color-principal);
@@ -87,19 +92,73 @@ header .logo{
 
 .carts .footerCarts{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: 0rem 0 1rem 1rem;
   color: aliceblue;
 }
 
-.carts button{
+.carts .verMas{
   color: aliceblue;
   background-color: transparent;
   border-radius: 1rem;
   border: aliceblue solid 0.2rem;
   padding: 0 2rem 0 2rem;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contenedorItemDetail{
+  display: flex;
+justify-content: center;
+}
+
+.itemDetail{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  border-radius: 1rem;
+  background-color: var(--color-principal);
+}
+
+.itemDetail img{
+  height: 30rem;
+  max-width: 100%;
+}
+
+.itemDetailFooter{
+  color: aliceblue;
+  padding: 0.5rem;
+}
+
+.textoDetail{
+  margin-bottom: 1rem;
+}
+
+.precioCantidad{
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cantidad{
+  display: flex;
+}
+
+.cantidad button{
+  width: 3rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  border: aliceblue solid 0.2rem;
+  color: aliceblue;
+  font-size: 2rem;
+}
+
+.cantidad p{
+  margin: 0 0.8rem 0 0.8rem;
 }
 }
 
@@ -162,18 +221,22 @@ font-size: 2.5rem;
 .carts .footerCarts{
   font-size: 1.2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: 0rem 0 1rem 1rem;
   color: aliceblue;
 }
 
-.carts button{
+.carts .verMas{
   color: aliceblue;
   background-color: transparent;
   border-radius: 1rem;
   border: aliceblue solid 0.2rem;
   padding: 0 2rem 0 2rem;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 } 

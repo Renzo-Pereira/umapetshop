@@ -1,5 +1,6 @@
 import logo from '../assets/img/logoUmaPetShop.jpeg';
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -28,10 +29,12 @@ return (
         <nav id="nav" className="nav">
           <ul>
             <button id="cerrar" className="botonCerrar"><i className="bi bi-x-lg"></i></button>
-            <li>Inicio</li>
-            <li>Catalogo</li>
-            <li>Nosotros</li>
-            <li>Contacto</li>
+            <li><Link className='textoMenu' to="/">Inicio</Link></li>
+            <li><Link className='textoMenu' to="/catalogo">Catalogo</Link></li>
+            <li><Link className='textoMenu' to="/nosotros">Nosotros</Link></li>
+            <li><Link className='textoMenu' to="/contacto">Contacto</Link></li>
+            <li><Link className='textoMenu' to="/productos/gato">Comida de Gato</Link></li>
+            <li><Link className='textoMenu' to="/productos/perro">Comida de Perro</Link></li>
           </ul>
         </nav>
         

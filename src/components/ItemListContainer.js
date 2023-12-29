@@ -20,6 +20,7 @@ const ItemListContainer = () =>{
       getDocs(q)
         .then((resp) => {
 
+        categoria ? setTitulo("Comida de " + categoria) : setTitulo("Productos")
           setProductos(
             resp.docs.map((doc) => {
               return { ...doc.data(), id: doc.id }

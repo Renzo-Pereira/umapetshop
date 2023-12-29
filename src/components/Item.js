@@ -1,6 +1,6 @@
 import { toCapital } from '../helpers/toCapital'
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Item = ( {producto} ) =>{
 return (
     <div className='carts'>
@@ -11,7 +11,7 @@ return (
                 <p>Precio: ${producto.precio}</p>
                 <p>{toCapital(producto.categoria)}</p>
             </div>
-            <button>Ver más</button>
+            <Link className="verMas" to={`/item/${producto.id}`}>Ver más</Link>
         </div>
     </div>
 )
