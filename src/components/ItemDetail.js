@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { toCapital } from "../helpers/toCapital"
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ( {item} ) =>{
@@ -18,15 +17,17 @@ const ItemDetail = ( {item} ) =>{
         <div className="itemDetail">
             <img src={item.imagen} alt={item.titulo} />
             <div className="itemDetailFooter">
-                <h3 className="textoDetail">{item.nombre}</h3>
-                <p className="textoDetail">{item.descripción}</p>
+                <div className="contenedorTextoDetail">
+                    <h3 className="textoDetail">{item.nombre}</h3>
+                    <p className="textoDetail">{item.descripción}</p>
+                </div>
                 <div className="precioCantidad">
-                <p>${item.precio}</p>
-                <ItemCount
-                  cantidad={cantidad}
-                  handleSumar={handleSumar}
-                  handleRestar={handleRestar}
-                />
+                    <p>${item.precio}</p>
+                    <ItemCount
+                    cantidad={cantidad}
+                    handleSumar={handleSumar}
+                    handleRestar={handleRestar}
+                    />
                 </div>
             </div>
     </div>
