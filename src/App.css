@@ -43,6 +43,8 @@ header .logo{
 .nav.visible {
   opacity: 1;
   visibility: visible;
+  width: 150px;
+  padding: 60px 16px 16px 0;
 }
 
 .nav ul{
@@ -163,6 +165,85 @@ header .logo{
 .cantidad p{
   margin: 0 0.8rem 0 0.8rem;
 }
+
+.contenedorForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorForm h1{
+  margin: 1rem 0 1rem 0;
+}
+
+.contenedorForm form{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input{
+  width: 100%;
+  margin-bottom: 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+form button{
+  background-color: transparent;
+    border: var(--color-principal) solid 0.3rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+
+.contenedorCategorias{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.opcionesCategoria{
+  margin-top: 3rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  background-color: var(--color-principal);
+  border-radius: 0rem 0 0 1rem;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  list-style: none;
+  right: 9rem;
+  top: 7rem;
+  width: 14rem;
+}
+
+.categoriasOcultar{
+  display: none;
+}
+
+.categoriasMostrar{
+  display: block;
+}
+
+.mostrar{
+  opacity: 1;
+  visibility: visible;
+}
+
+.ocultarBotonCategorias{
+  display: none;
+}
+
+.cerrarCategorias{
+  z-index: 1;
+  margin-right: 1rem;
+  display: none;
+}
+
+.mostrarBoton{
+  display: block;
+}
 }
 
 @media (min-width: 1600px) {
@@ -243,8 +324,6 @@ font-size: 2.5rem;
   text-decoration: none;
 }
 
-
-
 .contenedorItemDetail{
   display: flex;
 justify-content: center;
@@ -305,5 +384,107 @@ justify-content: center;
 
 .cantidad p{
   margin: 0 0.8rem 0 0.8rem;
-} 
+}
+
+.contenedorForm{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 8rem;
+}
+
+.contenedorForm h1{
+  font-size: 3rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.contenedorForm form{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form input{
+  width: 40%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+form button{
+  background-color: transparent;
+  border: var(--color-principal) solid 0.3rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.contenedorNosotros{
+  display: flex;
+}
+
+.contenedorNosotros img{
+  width: 30%;
+}
+
+.textoNosotros{
+  background-color: var(--color-principal);
+  color: aliceblue;
+  border-radius: 1rem;
+  margin: 2rem 3rem;
+  padding: 1rem;
+  width: 70%;
+}
+
+.textoNosotros h1{
+  font-size: 3rem;
+}
+
+.textoNosotros p{
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.contenedorCategorias{
+  display: flex;
+  flex-direction: row;
+}
+
+.opcionesCategoria{
+  margin-top: 3rem;
+  padding:  0.5rem 0.5rem 0.5rem 0;
+  background-color: var(--color-principal);
+  border-radius: 1rem;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  list-style: none;
+}
+
+.categoriasOcultar{
+  display: none;
+}
+
+.categoriasMostrar{
+  display: block;
+}
+
+.mostrar{
+  opacity: 1;
+  visibility: visible;
+}
+
+.ocultarBotonCategorias{
+  display: none;
+}
+
+.cerrarCategorias{
+  margin-left: 1rem;
+  display: none;
+}
+
+.mostrarBoton{
+  display: block;
+}
 } 
