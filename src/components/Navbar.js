@@ -1,15 +1,21 @@
 import logo from "../assets/img/logoUmaPetShopPng.png";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget"
 
 const Navbar = () => {
   useEffect(() => {
     const nav = document.querySelector("#nav");
     const abrir = document.querySelector("#abrir");
     const cerrar = document.querySelector("#cerrar");
+    const inicio = document.querySelector("#inicio");
     const categorias = document.querySelector("#categorias");
+    const nosotros = document.querySelector("#nosotros");
+    const contacto = document.querySelector("#contacto");
+    const carrito = document.querySelector("#carrito")
     const cerrarCategorias = document.querySelector("#cerrarCategorias");
     const opcionesCategoria = document.querySelector("#opcionesCategoria");
+    const elementosNav = [cerrar, inicio, contacto, nosotros, carrito, cerrarCategorias];
 
     if (abrir) {
       abrir.addEventListener("click", () => {
@@ -17,23 +23,20 @@ const Navbar = () => {
       });
     }
 
-    if (cerrar) {
-      cerrar.addEventListener("click", () => {
-        nav.classList.remove("visible");
-      });
-    }
+    elementosNav.forEach((elementoNav) => {
+      if (elementoNav) {
+        elementoNav.addEventListener("click", () => {
+          nav.classList.remove("visible");
+          opcionesCategoria.classList.remove("mostrar");
+          cerrarCategorias.classList.remove("mostrarBoton");
+        });
+      }
+    });
 
     if (categorias) {
       categorias.addEventListener("click", () => {
         opcionesCategoria.classList.add("mostrar");
         cerrarCategorias.classList.add("mostrarBoton");
-      });
-    }
-
-    if (cerrarCategorias) {
-      cerrarCategorias.addEventListener("click", () => {
-        opcionesCategoria.classList.remove("mostrar");
-        cerrarCategorias.classList.remove("mostrarBoton");
       });
     }
   }, []);
@@ -50,7 +53,7 @@ const Navbar = () => {
             <button id="cerrar" className="botonCerrar">
               <i className="bi bi-x-lg"></i>
             </button>
-            <li>
+            <li id="inicio">
               <Link className="textoMenu" to="/">
                 Inicio
               </Link>
@@ -72,18 +75,21 @@ const Navbar = () => {
                 </li>
               </div>
               <li className="cerrarCategorias" id="cerrarCategorias">
-              <i className="bi bi-x-circle"></i>
-            </li>
+                <i className="bi bi-x-circle"></i>
+              </li>
             </div>
-            <li>
+            <li id="nosotros">
               <Link className="textoMenu" to="/nosotros">
                 Nosotros
               </Link>
             </li>
-            <li>
+            <li id="contacto">
               <Link className="textoMenu" to="/contacto">
                 Contacto
               </Link>
+            </li>
+            <li id="carrito">
+              <CartWidget />
             </li>
           </ul>
         </nav>

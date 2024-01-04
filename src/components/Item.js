@@ -1,7 +1,9 @@
 import { toCapital } from '../helpers/toCapital'
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 const Item = ( {producto} ) =>{
+
 return (
     <div className='carts'>
         <img src={producto.imagen} alt={producto.nombre} />

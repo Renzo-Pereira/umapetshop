@@ -6,13 +6,17 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
 .textoMenu{
-  text-decoration: none;
   color: aliceblue;
 }
+
 @media (max-width: 767px){
+
+  /* -------------------------------------------------- Navbar 767px -------------------------------------------------- */
 header{
   background-color: var(--color-principal);
   color: aliceblue;
@@ -48,7 +52,6 @@ header .logo{
 }
 
 .nav ul{
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -64,7 +67,73 @@ header .logo{
   width: 2rem;
 }
 
-/* Productos */
+.carritoIcon{
+  color: aliceblue;
+  padding-right: 1rem;
+}
+
+.carritoIcon:hover{
+  background-color: aliceblue;
+  color: var(--color-principal);
+  border-radius: 1rem;
+  padding: 0.3rem 2rem 0.3rem 1rem;
+}
+
+.numerito{
+  color: var(--color-principal);
+  background-color: aliceblue;
+  border-radius: 1rem;
+  font-size: large;
+  position: absolute;
+  padding: 0 0.2rem 0 0.2rem;
+}
+
+.contenedorCategorias{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.opcionesCategoria{
+  margin-top: 3rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  background-color: var(--color-principal);
+  border-radius: 0rem 0 0 1rem;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  right: 9rem;
+  top: 7rem;
+  width: 14rem;
+}
+
+.categoriasOcultar{
+  display: none;
+}
+
+.categoriasMostrar{
+  display: block;
+}
+
+.mostrar{
+  opacity: 1;
+  visibility: visible;
+}
+
+.ocultarBotonCategorias{
+  display: none;
+}
+
+.cerrarCategorias{
+  z-index: 1;
+  margin-right: 1rem;
+  display: none;
+}
+
+.mostrarBoton{
+  display: block;
+}
+
+/* -------------------------------------------------- ItemListContainer 767px -------------------------------------------------- */
 
 .titulo{
   margin: 1rem 0 1rem 2rem;
@@ -110,8 +179,9 @@ header .logo{
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
 }
+
+/* -------------------------------------------------- ItemDetail 767px -------------------------------------------------- */
 
 .contenedorItemDetail{
   margin: 1rem 0 1rem 0;
@@ -134,9 +204,27 @@ header .logo{
   max-width: 100%;
 }
 
+.itemDetail h3{
+  font-size: 3rem;
+} 
+
+.pesoDetail{
+  border: aliceblue solid 0.1rem;
+  padding: 0.2rem;
+}
+
 .itemDetailFooter{
+  gap: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
   color: aliceblue;
   padding: 0.5rem;
+}
+
+.contenedorTextoDetail p{
+  width: 70%;
+  padding-top: 1rem;
 }
 
 .textoDetail{
@@ -149,22 +237,33 @@ header .logo{
   justify-content: space-evenly;
 }
 
+.precio{
+  font-size: 2rem;
+}
+
 .cantidad{
+  margin: 0;
   display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 0.8rem;
 }
 
 .cantidad button{
-  width: 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   background-color: transparent;
   border-radius: 1rem;
   border: aliceblue solid 0.2rem;
   color: aliceblue;
-  font-size: 2rem;
 }
 
-.cantidad p{
-  margin: 0 0.8rem 0 0.8rem;
+.cantidad button:active{
+  transition: 0.09s;
+  background-color: aliceblue;
+  color: var(--color-principal);
 }
+
+/* -------------------------------------------------- Formulario 767px -------------------------------------------------- */
 
 .contenedorForm{
   display: flex;
@@ -198,53 +297,124 @@ form button{
   padding: 1rem 2rem 1rem 2rem;
 }
 
+/* -------------------------------------------------- Nosotros 1600px -------------------------------------------------- */
 
-.contenedorCategorias{
+.contenedorNosotros{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
 }
 
-.opcionesCategoria{
-  margin-top: 3rem;
-  padding: 0.5rem 0 0.5rem 0.5rem;
+.contenedorNosotros img{
+  display: none;
+}
+
+.textoNosotros{
   background-color: var(--color-principal);
-  border-radius: 0rem 0 0 1rem;
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  list-style: none;
-  right: 9rem;
-  top: 7rem;
-  width: 14rem;
+  color: aliceblue;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 85%;
 }
 
-.categoriasOcultar{
-  display: none;
+.textoNosotros h1{
+  font-size: 2.7rem;
 }
 
-.categoriasMostrar{
-  display: block;
+.textoNosotros p{
+  font-size: 1.2rem;
+  margin: 1rem 0.3rem 0.3rem 0.3rem;
 }
 
-.mostrar{
-  opacity: 1;
-  visibility: visible;
+/* -------------------------------------------------- Footer -------------------------------------------------- */
+
+.footer{
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-principal);
+  color: aliceblue;
+  align-items: center;
 }
 
-.ocultarBotonCategorias{
-  display: none;
+.footer h3{
+  margin-top: 2rem;
 }
 
-.cerrarCategorias{
-  z-index: 1;
-  margin-right: 1rem;
-  display: none;
+.footer a{
+  color: aliceblue;
 }
 
-.mostrarBoton{
-  display: block;
+.footer ul{
+  width: 90%;
 }
+
+.footer li{
+  padding-top: 1rem;
 }
+
+.logoFooter{
+  width: 90%;
+}
+
+/* -------------------------------------------------- Carrito -------------------------------------------------- */
+
+.productosCarrito{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productosCarrito h1{
+  margin: 1rem 0 1rem 0;
+}
+
+.productoCarrito{
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  background-color: var(--color-principal);
+}
+
+.productoCarrito img{
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.footerProductoCarrito{
+  background-color: var(--color-principal);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 0 0 1rem;
+}
+
+.footerProductoCarrito p{
+  margin-top: 0.5rem;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 1rem;
+}
+
+.botonesTotal{
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  color: var(--color-principal);
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+} 
+
+/* ---------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 1600px) {
   header{
@@ -262,7 +432,6 @@ form button{
   }
 
   .nav ul{
-      list-style: none;
       display: flex;
       align-items: center;
       gap: 2rem;
@@ -274,7 +443,69 @@ form button{
       display: none;
   }
 
-  /* Productos */
+  .carritoIcon{
+    color: aliceblue;
+    padding-right: 1rem;
+  }
+
+  .carritoIcon:hover{
+    background-color: aliceblue;
+    color: var(--color-principal);
+    border-radius: 1rem;
+    padding: 0.3rem 2rem 0.3rem 1rem;
+  }
+
+  .numerito{
+    color: var(--color-principal);
+    background-color: aliceblue;
+    border-radius: 1rem;
+    font-size: large;
+    position: absolute;
+    padding: 0 0.2rem 0 0.2rem;
+  }
+
+  .contenedorCategorias{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .opcionesCategoria{
+    margin-top: 3rem;
+    padding:  0.5rem 0.5rem 0.5rem 0;
+    background-color: var(--color-principal);
+    border-radius: 1rem;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .categoriasOcultar{
+    display: none;
+  }
+  
+  .categoriasMostrar{
+    display: block;
+  }
+  
+  .mostrar{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .ocultarBotonCategorias{
+    display: none;
+  }
+  
+  .cerrarCategorias{
+    margin-left: 1rem;
+    display: none;
+  }
+  
+  .mostrarBoton{
+    display: block;
+  }
+
+  /* -------------------------------------------------- ItemListContainer -------------------------------------------------- */
 
 .titulo{
 margin: 1rem 0 1rem 3rem;
@@ -321,22 +552,32 @@ font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
 }
+
+/* -------------------------------------------------- ItemDetail -------------------------------------------------- */
 
 .contenedorItemDetail{
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .itemDetail{
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  max-width: 90%;
+  max-width: 60%;
   border-radius: 1rem;
   border: var(--color-principal) solid 0.3rem;
   background-color: var(--color-principal);
+}
+
+.itemDetail h3{
+  font-size: 4rem;
+}
+
+.pesoDetail{
+  border: aliceblue solid 0.1rem;
+  padding: 0.2rem;
 }
 
 .itemDetail img{
@@ -346,35 +587,34 @@ justify-content: center;
 }
 
 .itemDetailFooter{
+  gap: 1rem;
+  margin-left: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
   color: aliceblue;
   padding: 0.5rem;
 }
 
-.textoDetail{
-  margin-bottom: 1rem;
+.contenedorTextoDetail p{
+  width: 70%;
+  padding-top: 2rem;
 }
 
-.contenedorTextoDetail{
-  width: 50%;
-}
-
-.precioCantidad{
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+.precio{
+  font-size: 3rem;
 }
 
 .cantidad{
   display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
 }
 
-.cantidad button{
-  width: 3rem;
+.cantidad button{ 
+  padding: 0 0.3rem 0 0.3rem;
   background-color: transparent;
   border-radius: 1rem;
   border: aliceblue solid 0.2rem;
@@ -382,9 +622,22 @@ justify-content: center;
   font-size: 2rem;
 }
 
-.cantidad p{
-  margin: 0 0.8rem 0 0.8rem;
+.cantidad button:active{
+  transition: 0.09s;
+  background-color: aliceblue;
+  color: var(--color-principal);
 }
+
+.agregarAlCarrito{
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 1rem;
+  border: aliceblue solid 0.3rem;
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/* -------------------------------------------------- Formulario 1600px -------------------------------------------------- */
 
 .contenedorForm{
   display: flex;
@@ -420,6 +673,8 @@ form button{
   padding: 1rem 2rem 1rem 2rem;
 }
 
+/* -------------------------------------------------- Nosotros 1600px -------------------------------------------------- */
+
 .contenedorNosotros{
   display: flex;
 }
@@ -446,45 +701,84 @@ form button{
   margin: 1rem;
 }
 
-.contenedorCategorias{
+/* -------------------------------------------------- Footer -------------------------------------------------- */
+
+.footer{
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
-}
-
-.opcionesCategoria{
-  margin-top: 3rem;
-  padding:  0.5rem 0.5rem 0.5rem 0;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: var(--color-principal);
+  color: aliceblue;
+}
+
+.footer a{
+  color: aliceblue;
+}
+
+.footer li{
+  padding-top: 1rem;
+}
+
+.logoFooter{
+  width: 12rem;
+}
+
+/* -------------------------------------------------- Carrito -------------------------------------------------- */
+
+.productosCarrito h1{
+  font-size: 3rem;
+  margin: 1rem 0 1rem 1rem;
+}
+
+.productoCarrito{
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 95%;
   border-radius: 1rem;
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  list-style: none;
+  border: var(--color-principal) solid 0.3rem;
+  background-color: var(--color-principal);
 }
 
-.categoriasOcultar{
-  display: none;
+.productoCarrito img{
+  border-radius: 1rem;
+  width: 10%;
 }
 
-.categoriasMostrar{
-  display: block;
+.footerProductoCarrito{
+  background-color: var(--color-principal);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 0 0 1rem;
+  color: aliceblue;
 }
 
-.mostrar{
-  opacity: 1;
-  visibility: visible;
+.footerProductoCarrito h3{
+  font-size: 2rem;
 }
 
-.ocultarBotonCategorias{
-  display: none;
+.footerProductoCarrito p{
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
-.cerrarCategorias{
-  margin-left: 1rem;
-  display: none;
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 1rem;
+  margin: auto;
 }
 
-.mostrarBoton{
-  display: block;
+.botonesTotal{
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  color: var(--color-principal);
+  margin: 1rem 0.5rem 0 0.5rem;
 }
 } 
+
+/* ---------------------------------------------------------------------------------------------------- */
