@@ -13,12 +13,12 @@ const Footer = () => {
         </li>
         <li>
           <a href="https://www.instagram.com/umapetshop2023/">
-            <i class="bi bi-instagram"></i> umapetshop2023
+            <i className="bi bi-instagram"></i> umapetshop2023
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/profile.php?id=61553708134696">
-            <i class="bi bi-facebook"></i> Uma Petshop
+            <i className="bi bi-facebook"></i> Uma Petshop
           </a>
         </li>
       </ul>

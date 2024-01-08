@@ -24,6 +24,10 @@ function App() {
               path="/productos/:categoria"
               element={<ItemListContainer />}
             />
+                        <Route
+              path="/marca/:marca"
+              element={<ItemListContainer />}
+            />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/catalogo" element={<Catalogo />} />

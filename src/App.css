@@ -10,6 +10,10 @@
   text-decoration: none;
 }
 
+a{
+  color: aliceblue;
+}
+
 .textoMenu{
   color: aliceblue;
 }
@@ -297,7 +301,7 @@ form button{
   padding: 1rem 2rem 1rem 2rem;
 }
 
-/* -------------------------------------------------- Nosotros 1600px -------------------------------------------------- */
+/* -------------------------------------------------- Nosotros 767px -------------------------------------------------- */
 
 .contenedorNosotros{
   display: flex;
@@ -327,7 +331,7 @@ form button{
   margin: 1rem 0.3rem 0.3rem 0.3rem;
 }
 
-/* -------------------------------------------------- Footer -------------------------------------------------- */
+/* -------------------------------------------------- Footer 767px -------------------------------------------------- */
 
 .footer{
   margin-top: 2rem;
@@ -359,7 +363,7 @@ form button{
   width: 90%;
 }
 
-/* -------------------------------------------------- Carrito -------------------------------------------------- */
+/* -------------------------------------------------- Carrito 767px -------------------------------------------------- */
 
 .productosCarrito{
   display: flex;
@@ -464,47 +468,72 @@ form button{
     padding: 0 0.2rem 0 0.2rem;
   }
 
-  .contenedorCategorias{
+.contenedorCategorias button{
+  background-color: transparent;
+  color: aliceblue;
+  border: none;
+  font-size: 2rem;
+}
+
+  .categorias{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 15rem;
+    background-color: var(--color-principal);
+    padding: 0.5rem;
   }
   
   .opcionesCategoria{
-    margin-top: 3rem;
-    padding:  0.5rem 0.5rem 0.5rem 0;
-    background-color: var(--color-principal);
-    border-radius: 1rem;
     position: absolute;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .categoriasOcultar{
-    display: none;
-  }
-  
-  .categoriasMostrar{
-    display: block;
-  }
-  
-  .mostrar{
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .ocultarBotonCategorias{
-    display: none;
-  }
-  
-  .cerrarCategorias{
-    margin-left: 1rem;
-    display: none;
-  }
-  
-  .mostrarBoton{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: 13rem 0 0 11rem;
+    padding: 0.5rem;
+    background-color: var(--color-principal);
   }
 
+  .oculto{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .mostrar{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .promoA{
+    display: flex;
+    justify-content: center;
+  }
+
+  .contenedorMedio{
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    background-color: rgb(230, 243, 255);
+    color: var(--color-principal);
+    border: #FF9F1C solid 0.1rem;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .contenedorMedio P{
+    font-size: 1rem;
+  }
+
+  .contenedoresMedio{
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    width: 20%;
+  }
+
+  .contenedoresMedio i{
+  font-size: 4rem;
+  }
   /* -------------------------------------------------- ItemListContainer -------------------------------------------------- */
 
 .titulo{
@@ -516,13 +545,14 @@ font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .carts{
   border: var(--color-principal) solid 0.2rem;
   border-radius: 1rem;
   width: 337px;
+  height: 500px;
   margin: 0 2rem 2rem 0;
   background-color: var(--color-principal);
 }
@@ -778,6 +808,11 @@ form button{
   border: var(--color-principal) solid 0.3rem;
   color: var(--color-principal);
   margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.carrusel{
+  width: 90%;
+  margin: auto;
 }
 } 
 
