@@ -203,48 +203,6 @@ const Navbar = () => {
                 Inicio
               </Link>
             </li>
-
-            <ul className="contenedorCategorias">
-              <li>
-                Categorias 
-                <button><i id="flechaAbreCat" className="bi bi-caret-down"></i></button>
-                <button><i id="flechaCierreCat" className="bi bi-caret-up oculto"></i></button>
-              </li>
-
-              <ul id="categorias" className="categorias oculto">
-                <li>
-                  Alimento
-                  <button><i id="flechaAbreCatAlimento" className="bi bi-caret-right"></i></button>
-                  <button><i id="flechaCierreCatAlimento" className="bi bi-caret-left oculto"></i></button>
-                </li>
-
-                <li>
-                  Marcas
-                  <button><i id="flechaAbreCatMarca" className="bi bi-caret-right"></i></button>
-                  <button><i id="flechaCierreCatMarca" className="bi bi-caret-left oculto"></i></button>
-                </li>
-
-                <li id="juguetes">
-                  Juguetes
-                </li>
-              </ul>
-
-              <ul id="opcionesCategoriaAlimento" className="opcionesCategoria oculto">
-                <li id="comidaDeGato">
-                  <Link to={"/productos/gato"}>Comida de gato</Link>
-                </li>
-                <li id="comidaDePerro">
-                  <Link to={"/productos/perro"}>Comida de perro</Link>
-                </li>
-              </ul>
-
-              <ul id="opcionesCategoriaMarca" className="opcionesCategoria oculto">
-                <li id="frost">
-                  <Link to={"/marca/frost"}>Frost</Link>
-                </li>
-              </ul>
-            </ul>
-
             <li id="nosotros">
               <Link className="textoMenu" to="/nosotros">
                 Nosotros

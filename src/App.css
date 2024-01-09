@@ -468,42 +468,6 @@ form button{
     padding: 0 0.2rem 0 0.2rem;
   }
 
-.contenedorCategorias button{
-  background-color: transparent;
-  color: aliceblue;
-  border: none;
-  font-size: 2rem;
-}
-
-  .categorias{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 15rem;
-    background-color: var(--color-principal);
-    padding: 0.5rem;
-  }
-  
-  .opcionesCategoria{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    margin: 13rem 0 0 11rem;
-    padding: 0.5rem;
-    background-color: var(--color-principal);
-  }
-
-  .oculto{
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .mostrar{
-    visibility: visible;
-    opacity: 1;
-  }
-
   .promoA{
     display: flex;
     justify-content: center;
@@ -543,8 +507,6 @@ font-size: 2.5rem;
 
 .contenedor{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -808,6 +770,64 @@ form button{
   border: var(--color-principal) solid 0.3rem;
   color: var(--color-principal);
   margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.productos{
+  display: flex;
+}
+
+.contenedorCategorias{
+  font-size: 2rem;
+  padding: 0.8rem 0.5rem 0.5rem 0.5rem;
+  margin: 4.5rem 2rem 0 0;
+  min-width:  20rem;
+  background-color: var(--color-principal);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.contenedorCategorias li{
+  border-radius: 1rem;
+  padding: 0.3rem;
+  background-color: aliceblue;
+  color: var(--color-principal)
+}
+
+.contenedorCategorias button{
+background-color: transparent;
+border: none;
+color: var(--color-principal);
+font-size: 2rem;
+}
+
+.categorias{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.opcionesCategoria{
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  background-color: var(--color-principal);
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.opcionesCategoria a{
+  color: var(--color-principal);
+}
+
+.oculto{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mostrar{
+  visibility: visible;
+  opacity: 1;
 }
 
 .carrusel{
