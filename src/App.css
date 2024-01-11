@@ -92,6 +92,35 @@ header .logo{
   padding: 0 0.2rem 0 0.2rem;
 }
 
+.promoA{
+  width: 100%;
+}
+
+.contenedorMedio{
+  padding: 0.5rem;
+  background-color: rgb(230, 243, 255);
+  color: var(--color-principal);
+  border: #FF9F1C solid 0.1rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.contenedorMedio P{
+  font-size: 0.5rem;
+}
+
+.contenedoresMedio{
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contenedoresMedio i{
+font-size: 1.5rem;
+}
+
 .contenedorCategorias{
   display: flex;
   flex-direction: row-reverse;
@@ -415,6 +444,34 @@ form button{
   border: var(--color-principal) solid 0.3rem;
   color: var(--color-principal);
   margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.contenedorMarcas{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.marcas{
+  background-color: var(--color-principal);
+}
+
+.swiper-slide a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.marcas img{
+  object-fit: contain;
+  width: 64px;
+  height: 64px;
+  margin: 1rem 0 1rem 0;
+  background-color: aliceblue;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
 }
 } 
 
@@ -833,6 +890,35 @@ font-size: 2rem;
 .carrusel{
   width: 90%;
   margin: auto;
+}
+
+.contenedorMarcas{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.marcas{
+  border-radius: 1rem;
+  width: 90%;
+  background-color: var(--color-principal);
+}
+
+.swiper-slide a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.marcas img{
+  object-fit: contain;
+  width: 128px;
+  height: 128px;
+  margin: 1rem 0 1rem 0;
+  background-color: aliceblue;
+  border-radius: 100%;
+  width: 8rem;
 }
 } 
 
