@@ -37,8 +37,8 @@ const ItemListContainer = () => {
   return (
     <div>
       <Menu />
-        <ItemList productos={productos} titulo={titulo} />
       <CarruselDeMarcas />
+        <ItemList productos={productos} titulo={titulo} />
     </div>
   );
 };

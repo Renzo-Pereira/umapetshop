@@ -97,6 +97,7 @@ header .logo{
 }
 
 .contenedorMedio{
+  margin-top: 4rem;
   padding: 0.5rem;
   background-color: rgb(230, 243, 255);
   color: var(--color-principal);
@@ -187,7 +188,7 @@ font-size: 2rem;
 /* -------------------------------------------------- ItemListContainer 767px -------------------------------------------------- */
 
 .titulo{
-  margin: 1rem 0 1rem 2rem;
+  margin: 4rem 0 1rem 2rem;
   font-size: 2rem;
 }
 
@@ -465,7 +466,7 @@ form button{
 }
 
 .contenedorMarcas{
-  margin-top: 1rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
 }
@@ -550,7 +551,7 @@ form button{
 
   .contenedorMedio{
     padding: 1rem;
-    margin: 1rem 0 1rem 0;
+    margin: 8rem 0 1rem 0;
     background-color: rgb(230, 243, 255);
     color: var(--color-principal);
     border: #FF9F1C solid 0.1rem;
@@ -576,7 +577,7 @@ form button{
   /* -------------------------------------------------- ItemListContainer -------------------------------------------------- */
 
 .titulo{
-margin: 1rem 0 1rem 3rem;
+margin: 8rem 0 1rem 3rem;
 font-size: 2.5rem;
 }
 
@@ -917,20 +918,13 @@ font-size: 2rem;
   opacity: 1;
 }
 
-.carrusel{
-  width: 90%;
-  margin: auto;
-}
-
 .contenedorMarcas{
-  margin-top: 1rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
 }
 
 .marcas{
-  border-radius: 1rem;
-  width: 90%;
   background-color: var(--color-principal);
 }
 
