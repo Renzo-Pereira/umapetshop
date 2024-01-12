@@ -203,6 +203,96 @@ const Navbar = () => {
                 Inicio
               </Link>
             </li>
+
+            <ul className="contenedorCategorias">
+            <li className="botonCategorias">
+            <button id="flechaAbreCat" className="flechaCat">
+            <i  className="bi bi-list"></i>
+            Categorias
+            </button>
+
+            <button id="flechaCierreCat" className="flechaCat oculto">
+            <i  className="bi bi-list"></i>
+            Categorias
+            </button>
+          </li>
+
+          <ul id="categorias" className="categorias oculto">
+            <li>
+              Alimento
+              <button>
+                <i id="flechaAbreCatAlimento" className="bi bi-caret-down"></i>
+              </button>
+              <button>
+                <i
+                  id="flechaCierreCatAlimento"
+                  className="bi bi-caret-up oculto"
+                ></i>
+              </button>
+            </li>
+
+            <ul
+              id="opcionesCategoriaAlimento"
+              className="opcionesCategoria oculto"
+            >
+              <li id="comidaDeGato">
+                <Link to={"/productos/gato"}>Para gato</Link>
+              </li>
+              <li id="comidaDePerro">
+                <Link to={"/productos/perro"}>Para perro</Link>
+              </li>
+            </ul>
+
+            <li>
+              Marcas
+              <button>
+                <i id="flechaAbreCatMarca" className="bi bi-caret-down"></i>
+              </button>
+              <button>
+                <i
+                  id="flechaCierreCatMarca"
+                  className="bi bi-caret-up oculto"
+                ></i>
+              </button>
+            </li>
+
+            <ul
+              id="opcionesCategoriaMarca"
+              className="opcionesCategoria oculto"
+            >
+              <li id="frost">
+                <Link to={"/marca/frost"}>Frost</Link>
+              </li>
+              <li>
+                <Link to={"/marca/balanced"}>Balanced</Link>
+              </li>
+              <li>
+                <Link to={"/marca/dogchow"}>Dog Chow</Link>
+              </li>
+              <li>
+                <Link to={"/marca/eukanuba"}>Eukanuba</Link>
+              </li>
+              <li>
+                <Link to={"/marca/equilibrio"}>Equilibrio</Link>
+              </li>
+              <li>
+                <Link to={"/marca/hills"}>Hill´s</Link>
+              </li>
+              <li>
+                <Link to={"/marca/lager"}>Lager</Link>
+              </li>
+              <li>
+                <Link to={"/marca/premium"}>Premium</Link>
+              </li>
+              <li>
+                <Link to={"/marca/proplan"}>Pro Plan</Link>
+              </li>
+            </ul>
+
+            <li id="juguetes">Juguetes</li>
+          </ul>
+        </ul>
+
             <li id="nosotros">
               <Link className="textoMenu" to="/nosotros">
                 Nosotros

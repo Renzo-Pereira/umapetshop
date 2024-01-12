@@ -12,7 +12,6 @@ return (
                 <h4>{producto.nombre}</h4>
                 <p>Precio: ${producto.precio}</p>
                 <p>{toCapital(producto.categoria)}</p>
-                <p>{producto.marca}</p>
             </div>
             <Link id='verMas' className="verMas" to={`/item/${producto.id}`}>Ver más</Link>
         </div>
