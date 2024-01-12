@@ -28,13 +28,8 @@ const Navbar = () => {
     const flechaCierreCatMarca = document.querySelector("#flechaCierreCatMarca")
     const opcionesCategoriaAlimento = document.querySelector("#opcionesCategoriaAlimento");
     const opcionesCategoriaMarca = document.querySelector("#opcionesCategoriaMarca");
-    const comidaDeGato = document.querySelector("#comidaDeGato")
-    const comidaDePerro = document.querySelector("#comidaDePerro")
-    const juguetes = document.querySelector("#juguetes")
-    const frost = document.querySelector("#frost")
-    const catElegida = [comidaDeGato, comidaDePerro, juguetes, frost,];
+    const catElegida = document.querySelectorAll(".catElegida")
     
-
     if (abrir) {
       abrir.addEventListener("click", () => {
         nav.classList.add("visible");
@@ -67,29 +62,28 @@ const Navbar = () => {
       }
     });
 
-    catElegida.forEach((catElegida) => {
-      if (catElegida) {
-        catElegida.addEventListener("click", () => {
-          categorias.classList.remove("mostrar")
-          categorias.classList.add("oculto")
-          opcionesCategoriaMarca.classList.remove("mostrar")
-          opcionesCategoriaMarca.classList.add("oculto")
-          opcionesCategoriaAlimento.classList.remove("mostrar")
-          opcionesCategoriaAlimento.classList.add("oculto")
-          flechaCierreCat.classList.add("oculto")
-          flechaCierreCat.classList.remove("mostrar")
-          flechaAbreCat.classList.add("mostrar")
-          flechaAbreCat.classList.remove("oculto")
-          flechaCierreCatMarca.classList.add("oculto")
-          flechaCierreCatMarca.classList.remove("mostrar")
-          flechaAbreCatMarca.classList.add("mostrar")
-          flechaAbreCatMarca.classList.remove("oculto")
-          flechaAbreCatAlimento.classList.add("mostrar")
-          flechaAbreCatAlimento.classList.remove("oculto")
-          flechaCierreCatAlimento.classList.add("oculto")
-          flechaCierreCatAlimento.classList.remove("mostrar")
-        });
-      }
+    catElegida.forEach(function(li) {
+      li.addEventListener('click', () => {
+        categorias.classList.remove("mostrar")
+        categorias.classList.add("oculto")
+        opcionesCategoriaMarca.classList.remove("mostrar")
+        opcionesCategoriaMarca.classList.add("oculto")
+        opcionesCategoriaAlimento.classList.remove("mostrar")
+        opcionesCategoriaAlimento.classList.add("oculto")
+        flechaCierreCat.classList.add("oculto")
+        flechaCierreCat.classList.remove("mostrar")
+        flechaAbreCat.classList.add("mostrar")
+        flechaAbreCat.classList.remove("oculto")
+        flechaCierreCatMarca.classList.add("oculto")
+        flechaCierreCatMarca.classList.remove("mostrar")
+        flechaAbreCatMarca.classList.add("mostrar")
+        flechaAbreCatMarca.classList.remove("oculto")
+        flechaAbreCatAlimento.classList.add("mostrar")
+        flechaAbreCatAlimento.classList.remove("oculto")
+        flechaCierreCatAlimento.classList.add("oculto")
+        flechaCierreCatAlimento.classList.remove("mostrar")
+        nav.classList.remove("visible");
+      })
     });
 
     if (flechaAbreCat) {
@@ -235,10 +229,10 @@ const Navbar = () => {
               id="opcionesCategoriaAlimento"
               className="opcionesCategoria oculto"
             >
-              <li id="comidaDeGato">
+              <li className="catElegida">
                 <Link to={"/productos/gato"}>Para gato</Link>
               </li>
-              <li id="comidaDePerro">
+              <li className="catElegida">
                 <Link to={"/productos/perro"}>Para perro</Link>
               </li>
             </ul>
@@ -260,36 +254,36 @@ const Navbar = () => {
               id="opcionesCategoriaMarca"
               className="opcionesCategoria oculto"
             >
-              <li id="frost">
+              <li className="catElegida">
                 <Link to={"/marca/frost"}>Frost</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/balanced"}>Balanced</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/dogchow"}>Dog Chow</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/eukanuba"}>Eukanuba</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/equilibrio"}>Equilibrio</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/hills"}>Hill´s</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/lager"}>Lager</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/premium"}>Premium</Link>
               </li>
-              <li>
+              <li className="catElegida">
                 <Link to={"/marca/proplan"}>Pro Plan</Link>
               </li>
             </ul>
 
-            <li id="juguetes">Juguetes</li>
+            <li className="catElegida">Juguetes</li>
           </ul>
         </ul>
 

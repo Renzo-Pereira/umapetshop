@@ -38,7 +38,12 @@ const Carrito = () => {
           </div>
         </div>
       ) : (
-        <h2 className="carritoVacio">El carrito está vacío :(</h2>
+      <div className="carritoVacio">
+        <h2>El carrito está vacío, vuelve al inicio para realizar una compra!</h2>
+        <button className="botonInicio">
+          <Link to={"/"}> Inicio</Link>
+        </button>
+        </div>
       )}
     </div>
   );

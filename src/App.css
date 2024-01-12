@@ -148,6 +148,7 @@ font-size: 2rem;
 }
 
 .categorias{
+  z-index: 2;
   background-color: rgb(230, 243, 255, 0.9);
   border-radius: 0 0 1rem 1rem;
   width: 11.5rem;
@@ -344,7 +345,8 @@ form input{
 
 form button{
   background-color: transparent;
-    border: var(--color-principal) solid 0.3rem;
+  border: var(--color-principal) solid 0.3rem;
+  color: var(--color-principal);
   border-radius: 1rem;
   padding: 1rem 2rem 1rem 2rem;
 }
@@ -491,6 +493,104 @@ form button{
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
+}
+
+
+
+.checkout{
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorFormComprar{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.contenedorFormComprar h1{
+  margin: 1rem 0 1rem 0;
+}
+
+.contenedorFormComprar form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contenedorFormComprar input{
+  width: 90%;
+}
+
+.productosComprar{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.productoComprar{
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  background-color: var(--color-principal);
+  height: 20%;
+}
+
+.productoComprar img{
+  border-radius: 1rem;
+  width: 20%;
+}
+
+.footerProductoComprar{
+  background-color: var(--color-principal);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 0 0 1rem;
+  color: aliceblue;
+}
+
+.footerProductoComprar h3{
+  font-size: 0.8rem;
+}
+
+.footerProductoComprar p{
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 1rem;
+  margin: auto;
+}
+
+.carritoVacio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  font-size: 1rem;
+  width: 90%;
+  margin: auto;
+}
+
+.botonInicio{
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  width: 12rem;
+  height: 5rem;
+  background-color: var(--color-principal);
+  border-radius: 1rem;
+  border: none;
+  transition: 0.5s;
 }
 } 
 
@@ -943,6 +1043,99 @@ font-size: 2rem;
   background-color: aliceblue;
   border-radius: 100%;
   width: 8rem;
+}
+
+
+.checkout{
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedorFormComprar{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorFormComprar h1{
+  margin: 1rem 0 1rem 0;
+}
+
+.contenedorFormComprar form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contenedorFormComprar input{
+  width: 100%;
+}
+
+.productosComprar{
+  margin-top: 1rem;
+  width: 30%;
+}
+
+.productoComprar{
+  margin: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  border: var(--color-principal) solid 0.3rem;
+  background-color: var(--color-principal);
+  height: 20%;
+}
+
+.productoComprar img{
+  border-radius: 1rem;
+  width: 20%;
+}
+
+.footerProductoComprar{
+  background-color: var(--color-principal);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem 0 0 1rem;
+  color: aliceblue;
+}
+
+.footerProductoComprar h3{
+  font-size: 0.8rem;
+}
+
+.footerProductoComprar p{
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 1rem;
+  margin: auto;
+}
+
+.carritoVacio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.botonInicio{
+  font-size: 3rem;
+  margin-top: 1rem;
+  width: 12rem;
+  height: 5rem;
+  background-color: var(--color-principal);
+  border-radius: 1rem;
+  border: none;
+  transition: 0.5s;
+}
+
+.botonInicio:hover{
+  font-size: 3.3rem;
 }
 } 
 
