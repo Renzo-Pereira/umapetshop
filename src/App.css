@@ -18,6 +18,21 @@ a{
   color: aliceblue;
 }
 
+.fin{
+  margin: 10rem 0 20rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fin p{
+  margin-top: 1rem;
+  background-color: var(--color-principal);
+  color: aliceblue;
+  font-size: 2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
 @media (max-width: 767px){
 
   /* -------------------------------------------------- Navbar 767px -------------------------------------------------- */
@@ -591,6 +606,24 @@ form button{
   border-radius: 1rem;
   border: none;
   transition: 0.5s;
+}
+
+.fin{
+  margin: 10rem 0 20rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fin p{
+  width: 80%;
+  margin-top: 1rem;
+  background-color: var(--color-principal);
+  color: aliceblue;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
 }
 } 
 

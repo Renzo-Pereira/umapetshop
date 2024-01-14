@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { useForm } from "react-hook-form";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 const Checkout = () => {
@@ -11,26 +11,31 @@ const Checkout = () => {
 
   const { register, handleSubmit } = useForm();
 
-  const comprar = (data) => {
+  const comprar = async (data) => {
     const pedido = {
       cliente: data,
       productos: carrito,
       total: precioTotal(),
     };
-    console.log(pedido);
 
     const pedidosRef = collection(db, "pedidos");
+    const docPedido = await addDoc(pedidosRef, pedido);
 
-    addDoc(pedidosRef, pedido).then((doc) => {
-      setPedidoId(doc.id);
-      vaciarCarrito();
-    });
+    for (const producto of carrito) {
+      const productoRef = doc(db, "productos", producto.id);
+      await updateDoc(productoRef, {
+        stock: producto.stock - producto.cantidad,
+      });
+    }
+
+    setPedidoId(docPedido.id);
+    vaciarCarrito();
   };
 
   if (pedidoId) {
     return (
-      <div className="container">
-        <h1 className="main-title">Muchas gracias por tu compra</h1>
+      <div className="fin">
+        <h1>Muchas gracias por tu compra</h1>
         <p>Tu número de pedido es: {pedidoId}</p>
       </div>
     );

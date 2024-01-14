@@ -7,7 +7,7 @@ const ItemDetail = ( {item} ) =>{
     const { carrito, agregarAlCarrito } = useContext(CartContext);
     console.log(carrito);
 
-    const [cantidad, setCantidad] = useState(1);
+    const [cantidad, setCantidad] = useState(0);
     
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)
