@@ -1,5 +1,6 @@
 :root{
   --color-principal: #FF9F1C;
+  --swiper-pagination-color: #FF9F1C;
 }
 
 * {
@@ -32,6 +33,16 @@ a{
   font-size: 2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1rem;
+}
+
+.carrusel{
+  width: 90%;
+  margin: 2rem auto 2rem auto;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 767px){
 
