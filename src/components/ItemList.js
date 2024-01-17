@@ -1,9 +1,9 @@
 import Item from "./Item";
-import { toCapital } from "../helpers/toCapital";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from 'swiper/modules';
 import "swiper/css";
 import 'swiper/css/pagination';
+
 
 const ItemList = ({ productos, titulo }) => {
   return (

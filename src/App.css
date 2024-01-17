@@ -44,6 +44,14 @@ a{
   display: flex;
   justify-content: center;
 }
+
+.verTodos{
+  color: #FF9F1C;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+}
 @media (max-width: 767px){
 
   /* -------------------------------------------------- Navbar 767px -------------------------------------------------- */
