@@ -18,13 +18,13 @@ const ItemDetail = ( {item} ) =>{
     }
 
     return (
+    <div className="contenedorItemDetail">
         <div className="itemDetail">
             <img src={item.imagen} alt={item.titulo} />
             <div className="itemDetailFooter">
                 <div className="contenedorTextoDetail">
-                    <h3 className="">{item.nombre}</h3>
+                    <h3>{item.nombre}</h3>
                     <p>Peso: <span className="pesoDetail">{item.peso}Kg</span></p>
-                    <p className="textoDetail">{item.descripción}</p>
                 </div>
                 <p className="precio">$ {item.precio}</p>
                 <div>
@@ -37,6 +37,11 @@ const ItemDetail = ( {item} ) =>{
                 </div>
             </div>
     </div>
+                <div className="itemDetailDescrip">
+                    <h3>Descripción</h3>
+                <p className="textoDetail">{item.descripción}</p>
+                </div>
+                </div>
     )
 
 }

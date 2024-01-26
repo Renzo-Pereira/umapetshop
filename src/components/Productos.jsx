@@ -32,7 +32,7 @@ const Productos = () => {
       }, [categoria, marca]);
 
   return (
-    <div>
+    <div className="contenedorProductos">
       <h2 className="titulo">{toCapital(titulo)}</h2>
 
       <div className="contenedor">

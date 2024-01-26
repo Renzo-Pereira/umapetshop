@@ -284,7 +284,7 @@ const Navbar = () => {
             </ul>
 
             <li className="catElegida">
-            <Link to={"/productos/juguetes"}>juguetes</Link>
+            <Link className="catJuguetes" to={"/productos/juguetes"}>Juguetes</Link>
             </li>
           </ul>
         </ul>
