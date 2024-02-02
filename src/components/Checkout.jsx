@@ -4,14 +4,41 @@ import { useForm } from "react-hook-form";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/config";
 
-const Checkout = () => {
-  const [pedidoId, setPedidoId] = useState("");
+const initialForm = {
+  nombre: "",
+  email: "",
+  telefono: "",
+};
 
+const Checkout = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue,
+  } = useForm({
+    defaultValues: initialForm,
+  });
+
+  const [pedidoId, setPedidoId] = useState("");
   const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
-  const { register, handleSubmit } = useForm();
-
   const comprar = async (data) => {
+    if (!data.nombre.trim()) {
+      setValue("nombre", "");
+      return;
+    }
+
+    if (!data.email.trim()) {
+      setValue("email", "");
+      return;
+    }
+
+    if (!data.telefono.trim()) {
+      setValue("telefono", "");
+      return;
+    }
+
     const pedido = {
       cliente: data,
       productos: carrito,
@@ -46,11 +73,56 @@ const Checkout = () => {
       <div className="contenedorFormComprar">
         <h1>Finalizar compra</h1>
         <form onSubmit={handleSubmit(comprar)}>
-          <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")}/>
-          <input type="email" placeholder="Ingresá tu e-mail" {...register("email")}/>
-          <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")}/>
+          <input
+            type="text"
+            placeholder="Ingresá tu nombre"
+            {...register("nombre", {
+              required: "El campo 'Nombre' es requerido",
+              pattern: {
+                value: /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/,
+                message: "El campo 'Nombre' solo acepta letras",
+              },
+            })}
+          />
+          {errors.nombre && <p className="errors">{errors.nombre.message}</p>}
 
-          <button type="submit">Comprar</button>
+          <input
+            type="email"
+            placeholder="Ingresá tu e-mail"
+            {...register("email", {
+              required: "El campo 'Email' es requerido",
+              pattern: {
+                value: /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/,
+                message: "El campo 'Email' no acepta simbolos",
+              },
+            })}
+          />
+          {errors.email && <p className="errors">{errors.email.message}</p>}
+
+          <input
+            type="tel"
+            placeholder="Ingresá tu teléfono"
+            {...register("telefono", {
+              required: "El campo 'Telefono' es requerido",
+              pattern: {
+                value: /^\d+$/,
+                message: "El campo 'Telefono' solo puede contener números",
+              },
+              minLength: {
+                value: 9,
+                message: "El numero de telefono debe ser de 9 numeros",
+              },
+              maxLength: {
+                value: 9,
+                message: "El numero de telefono no puede ser más largo de 9 numeros",
+              },
+            })}
+          />
+          {errors.telefono && (
+            <p className="errors">{errors.telefono.message}</p>
+          )}
+
+          <button className="botonForm" type="submit">Comprar</button>
         </form>
       </div>
 

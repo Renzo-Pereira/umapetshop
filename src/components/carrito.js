@@ -20,12 +20,14 @@ const Carrito = () => {
       {carrito.map((prod) => (
         <div className="productoCarrito" key={prod.id}>
           <img src={prod.imagen} alt={prod.titulo} />
+          <div className="contenedorFooterProductoCarrito">
           <div className="footerProductoCarrito">
             <h3>{prod.nombre}</h3>
             <p>Precio unit: ${prod.precio}</p>
             <p>Precio total: ${prod.precio * prod.cantidad}</p>
             <p>Cant: {prod.cantidad}</p>
-            <button onClick={() => handleEliminar(prod.id)}>borrar</button>
+            </div>
+            <button className="botonBorrar" onClick={() => handleEliminar(prod.id)}><i className="bi bi-trash"></i></button>
           </div>
         </div>
       ))}

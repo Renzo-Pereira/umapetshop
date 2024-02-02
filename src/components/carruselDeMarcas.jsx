@@ -17,36 +17,34 @@ const CarruselDeMarcas = () => {
         <Swiper
           spaceBetween={50}
           slidesPerView={5}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           className="marcas"
         >
           <SwiperSlide>
-            <Link to={"/marca/frost"}><img src={LogoFrost} alt="" />Frost</Link>
+            <Link to={"/marcas/frost"}><img src={LogoFrost} alt="" />Frost</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/balanced"}><img src={LogoBalanced} alt="" />Balanced</Link>
+            <Link to={"/marcas/balanced"}><img src={LogoBalanced} alt="" />Balanced</Link>
           </SwiperSlide>
           <SwiperSlide>       
-            <Link to={"/marca/dogchow"}><img src={logoDogChow} alt="" />Dog Chow</Link>
+            <Link to={"/marcas/dogchow"}><img src={logoDogChow} alt="" />Dog Chow</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/eukanuba"}><img src={LogoEukanuba} alt="" />Eukanuba</Link>
+            <Link to={"/marcas/eukanuba"}><img src={LogoEukanuba} alt="" />Eukanuba</Link>
           </SwiperSlide>
           <SwiperSlide>
-          <Link to={"/marca/hills"}><img src={LogoHills} alt="" />Hill´s</Link>
+          <Link to={"/marcas/hills"}><img src={LogoHills} alt="" />Hill´s</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/equilibrio"}><img src={LogoEquilibrio} alt="" />Equilibrio</Link>
+            <Link to={"/marcas/equilibrio"}><img src={LogoEquilibrio} alt="" />Equilibrio</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/lager"}><img src={LogoLager} alt="" />Lager</Link>
+            <Link to={"/marcas/lager"}><img src={LogoLager} alt="" />Lager</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/premium"}><img src={LogoVitalcanPremium} alt="" />Premium</Link>
+            <Link to={"/marcas/premium"}><img src={LogoVitalcanPremium} alt="" />Premium</Link>
           </SwiperSlide>
           <SwiperSlide>
-            <Link to={"/marca/proplan"}><img src={LogoProPlan} alt="" />Pro Plan</Link>
+            <Link to={"/marcas/proplan"}><img src={LogoProPlan} alt="" />Pro Plan</Link>
           </SwiperSlide>
           ...
         </Swiper>

@@ -39,6 +39,11 @@
 .pagination {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+a{
+  color: aliceblue;
 }
 
 .verTodos {
@@ -102,14 +107,13 @@
 
   .carritoIcon {
     color: aliceblue;
-    padding-right: 1rem;
+    padding: 0.3rem 2rem 0.3rem 1rem;
   }
 
   .carritoIcon:hover {
     background-color: aliceblue;
     color: var(--color-principal);
     border-radius: 1rem;
-    padding: 0.3rem 2rem 0.3rem 1rem;
   }
 
   .numerito {
@@ -443,12 +447,27 @@
     padding: 0.5rem;
   }
 
+  textarea {
+    resize: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: var(--color-principal) solid 0.3rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+
   form button {
     background-color: transparent;
     border: var(--color-principal) solid 0.3rem;
     color: var(--color-principal);
     border-radius: 1rem;
     padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .errors {
+    font-weight: bold;
+    color: #dc3545;
+    padding-bottom: 0.5rem;
   }
 
   /* -------------------------------------------------- Nosotros 767px -------------------------------------------------- */
@@ -526,6 +545,7 @@
   }
 
   .productoCarrito {
+    color: aliceblue;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -557,6 +577,22 @@
     border: var(--color-principal) solid 0.3rem;
     color: var(--color-principal);
     margin: 1rem 0.5rem 0 0.5rem;
+  }
+
+  .contenedorFooterProductoCarrito {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .botonBorrar {
+    transition: 0.2s;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    color: aliceblue;
+    padding: 0.5rem;
   }
 
   .total {
@@ -711,14 +747,13 @@
 
   .carritoIcon {
     color: aliceblue;
-    padding-right: 1rem;
+    padding: 0.3rem 2rem 0.3rem 1rem;
   }
 
   .carritoIcon:hover {
     background-color: aliceblue;
     color: var(--color-principal);
     border-radius: 1rem;
-    padding: 0.3rem 2rem 0.3rem 1rem;
   }
 
   .numerito {
@@ -771,6 +806,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
   }
 
   .carts {
@@ -778,7 +814,6 @@
     border-radius: 1rem;
     width: 337px;
     height: 500px;
-    margin: 0 2rem 2rem 0;
     background-color: var(--color-principal);
   }
 
@@ -789,8 +824,10 @@
   }
 
   .carts .footerCarts {
+    height: 25%;
     font-size: 1.2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
     border-radius: 0rem 0 1rem 1rem;
@@ -936,11 +973,26 @@
     padding: 0.5rem;
   }
 
+  textarea {
+    resize: none;
+    width: 40%;
+    margin-bottom: 1rem;
+    border: var(--color-principal) solid 0.3rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+
   form button {
     background-color: transparent;
     border: var(--color-principal) solid 0.3rem;
     border-radius: 1rem;
     padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .errors {
+    font-weight: bold;
+    color: #dc3545;
+    padding: 0 0 0.5rem 1rem;
   }
 
   /* -------------------------------------------------- Nosotros 1600px -------------------------------------------------- */
@@ -1030,6 +1082,28 @@
   .footerProductoCarrito p {
     font-size: 1rem;
     margin-top: 0.5rem;
+  }
+
+  .contenedorFooterProductoCarrito {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .botonBorrar {
+    transition: 0.2s;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    color: aliceblue;
+    padding: 0.5rem;
+  }
+
+  .botonBorrar:hover {
+    background-color: aliceblue;
+    border-radius: 1rem;
+    color: var(--color-principal);
   }
 
   .total {
@@ -1133,6 +1207,10 @@
     background-color: var(--color-principal);
   }
 
+  .marcas a {
+    color: aliceblue;
+  }
+
   .swiper-slide a {
     display: flex;
     flex-direction: column;
@@ -1220,6 +1298,23 @@
     margin: auto;
   }
 
+  .botonForm {
+    margin-bottom: 12rem;
+    transition: 0.2s;
+  }
+
+  .botonForm:hover {
+    cursor: pointer;
+    background-color: var(--color-principal);
+    color: aliceblue;
+  }
+
+  .botonForm:active {
+    background-color: aliceblue;
+    color: black;
+    transition: none;
+  }
+
   .carritoVacio {
     display: flex;
     flex-direction: column;
@@ -1229,7 +1324,7 @@
 
   .botonInicio {
     font-size: 3rem;
-    margin-top: 1rem;
+    margin: 1rem 0 20rem 0;
     width: 12rem;
     height: 5rem;
     background-color: var(--color-principal);

@@ -22,7 +22,13 @@ const Productos = () => {
           : productosRef;
     
         getDocs(q).then((resp) => {
-          categoria ? setTitulo("Comida de " + categoria) : setTitulo("Productos");
+          setTitulo(
+            categoria && categoria !== "juguetes"
+              ? "Comida de " + categoria
+              : categoria === "juguetes"
+              ? "Juguetes"
+              : "Productos"
+          );
           setProductos(
             resp.docs.map((doc) => {
               return { ...doc.data(), id: doc.id };
@@ -30,7 +36,6 @@ const Productos = () => {
           );
         });
       }, [categoria, marca]);
-
   return (
     <div className="contenedorProductos">
       <h2 className="titulo">{toCapital(titulo)}</h2>
