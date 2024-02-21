@@ -40,7 +40,7 @@ const ItemList = ({ productos, titulo }) => {
                 slidesPerView: 3,
                 spaceBetween: 30,
               },
-              "@1.75": {
+              "@2": {
                 slidesPerView: 4,
                 spaceBetween: 20,
               },

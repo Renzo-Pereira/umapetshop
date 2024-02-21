@@ -1,4 +1,4 @@
-import logo from '../assets/img/logoUmaPetShopPng.png';
+import logo from "../assets/img/logopng.webp";
 
 const Nosotros = () => {
   return (

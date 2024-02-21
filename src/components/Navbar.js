@@ -1,4 +1,4 @@
-import logo from "../assets/img/logoUmaPetShopPng.png";
+import logo from "../assets/img/logo.webp";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";

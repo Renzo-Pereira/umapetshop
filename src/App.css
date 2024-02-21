@@ -718,7 +718,7 @@ a{
 
 /* ---------------------------------------------------------------------------------------------------- */
 
-@media (min-width: 1600px) {
+@media (min-width: 768px) {
   header {
     background-color: var(--color-principal);
     color: aliceblue;
@@ -730,7 +730,8 @@ a{
   }
 
   header .logo {
-    width: 8rem;
+    padding-left: 2rem;
+    width: 10rem;
   }
 
   .nav ul {
